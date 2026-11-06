@@ -27,6 +27,8 @@ jobs:
         run: npm ci
 
       - name: Build frontend
+        env:
+          VITE_API_URL: https://serveur-portfolio-5ne5.onrender.com
         run: npm run build
 
       - name: Install backend dependencies
