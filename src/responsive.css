@@ -232,6 +232,17 @@ footer a {
     padding: 1.25rem !important;
   }
 
+  #contact .contact-success {
+    gap: 0.9rem !important;
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  #contact .contact-success .btn-secondary,
+  #contact .contact-form button[type="submit"] {
+    width: 100%;
+    min-height: 3rem;
+  }
+
   .contact-info-card {
     gap: 0.75rem !important;
     padding: 1rem !important;

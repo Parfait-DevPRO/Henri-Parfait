@@ -117,7 +117,7 @@ export default function Contact() {
           {/* Form */}
           <div style={{ animation: 'reveal 0.6s 0.1s ease both' }}>
             {sent ? (
-              <div className="card-modern" data-reveal data-reveal-delay="80" style={{
+              <div className="card-modern contact-success" role="status" aria-live="polite" aria-atomic="true" style={{
                 padding: '3rem 2.5rem', textAlign: 'center',
                 display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem',
               }}>
@@ -127,7 +127,7 @@ export default function Contact() {
                 <button className="btn-secondary" onClick={() => setSent(false)} style={{ marginTop: '1rem' }}>Envoyer un autre message</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="card-modern contact-form" data-reveal data-reveal-delay="80" onMouseMove={handleTilt} onMouseLeave={resetTilt} style={{
+              <form onSubmit={handleSubmit} aria-busy={loading} className="card-modern contact-form" data-reveal data-reveal-delay="80" onMouseMove={handleTilt} onMouseLeave={resetTilt} style={{
                 padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.2rem',
               }}>
                 {errorMessage && <div className="contact-error-message" role="alert"><Icon name="close" size={22} strokeWidth={3} /><span>{errorMessage}</span></div>}
@@ -162,7 +162,7 @@ export default function Contact() {
                     className="form-input message-input" style={{ resize: 'vertical', minHeight: 170 }}
                   />
                 </div>
-                <button type="submit" disabled={loading} style={{
+                <button type="submit" disabled={loading} aria-live="polite" style={{
                   background: loading ? 'color-mix(in srgb, var(--primary) 30%, transparent)' : 'linear-gradient(135deg, var(--primary), var(--primary-container))',
                   color: 'var(--on-primary)', border: 'none', borderRadius: 'calc(var(--radius) + 2px)',
                   padding: '0.95rem 2rem', fontFamily: 'Inter, sans-serif',
