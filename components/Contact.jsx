@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../src/App.css';
 import Icon from '../src/components/Icon';
 import { handleTilt, resetTilt } from '../src/utils/tilt';
@@ -131,7 +131,7 @@ export default function Contact() {
                 padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.2rem',
               }}>
                 {errorMessage && <div className="contact-error-message" role="alert"><Icon name="close" size={22} strokeWidth={3} /><span>{errorMessage}</span></div>}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="contact-fields-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
                     <label style={{ color: 'var(--text-muted)', fontSize: '1rem', fontWeight: 500, display: 'block', marginBottom: 6 }}>Nom *</label>
                     <input

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../src/App.css';
 import CuriosityIcon from '../src/assets/curiosity.webp';
 import RigorIcon from '../src/assets/rigor.svg';
@@ -29,7 +28,7 @@ export default function Apropos() {
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <h2 ref={titleRef} className={`section-title gradient-text reveal${titleVisible ? ' is-visible' : ''}`}>À propos de moi</h2>
 
-        <div style={{
+        <div className="about-layout" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '3rem', alignItems: 'start',
@@ -106,7 +105,7 @@ export default function Apropos() {
               color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.12em',
               marginBottom: '1.2rem',
             }}> Mes valeurs</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="about-values-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               {valeurs.map((v, i) => (
                 <div key={v.titre} className="card-modern" data-reveal data-reveal-delay="80" onMouseMove={handleTilt} onMouseLeave={resetTilt} style={{
                   padding: '1.5rem 1.8rem',

@@ -1,0 +1,287 @@
+img,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+#root,
+main,
+.hero-container > *,
+.about-layout > *,
+.contact-grid > * {
+  min-width: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.hero-title,
+.project-card-title,
+.project-card-content p,
+.contact-info-card > div,
+footer a {
+  overflow-wrap: anywhere;
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 34rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    order: 1;
+    width: min(100%, 32rem);
+  }
+
+  .about-layout,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .about-layout {
+    gap: 1.5rem !important;
+  }
+
+  .about-layout > *,
+  .contact-grid > * {
+    width: 100%;
+  }
+
+  .tools-category-row {
+    grid-template-columns: minmax(110px, 145px) minmax(0, 1fr);
+  }
+
+  .mobile-nav {
+    max-height: calc(100dvh - 5.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  .competences-container,
+  .nav-inner {
+    width: calc(100% - 2rem);
+  }
+
+  .hero-section {
+    padding: 3rem 0 4.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.15rem, 10.5vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-visual {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .hero-photo-frame {
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .hero-photo-frame img {
+    max-height: 28rem;
+    border-radius: 1.15rem;
+  }
+
+  .hero-floating-card {
+    top: 0;
+    right: 0;
+    max-width: calc(100% - 1rem);
+  }
+
+  .hero-stats {
+    right: 0;
+    bottom: -1.5rem;
+    left: 0;
+    justify-content: center;
+    gap: clamp(0.35rem, 2vw, 0.75rem);
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .hero-stat {
+    padding-right: clamp(0.35rem, 2vw, 0.75rem);
+  }
+
+  .hero-stat span {
+    font-size: clamp(0.55rem, 2.5vw, 0.68rem);
+  }
+
+  .competences-section,
+  section.section-dark,
+  section.section-alt,
+  #projets,
+  #contact,
+  #a-propos {
+    padding: 4rem 1rem !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card-carousel {
+    padding: 0 1.65rem 2.5rem;
+  }
+
+  .carousel-track {
+    gap: 0.75rem;
+    padding: 0.65rem 0.15rem 1rem;
+    scroll-padding-inline: 0.15rem;
+    touch-action: pan-x pan-y;
+  }
+
+  .carousel-slide {
+    flex-basis: 100%;
+  }
+
+  .carousel-arrow {
+    top: 42%;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .project-showcase-card,
+  .skill-card {
+    min-height: 0 !important;
+  }
+
+  .project-card-topline,
+  .skill-card-header {
+    min-height: 0;
+    padding: 1.15rem;
+  }
+
+  .project-card-content {
+    min-height: 0 !important;
+    padding: 1.15rem;
+  }
+
+  .project-card-actions {
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 0.5rem;
+  }
+
+  .project-card-actions .carousel-action-button,
+  .project-card-actions .carousel-action-button.secondary {
+    flex: 1 1 7rem;
+    min-width: 0;
+    min-height: 2.75rem;
+    padding-inline: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .about-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #a-propos .card-modern {
+    min-height: 0 !important;
+    padding: 1.4rem !important;
+  }
+
+  .about-values-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .timeline-line {
+    left: 0.3rem;
+  }
+
+  .contact-grid {
+    gap: 1.25rem !important;
+  }
+
+  .contact-fields-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #contact .contact-form {
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+  }
+
+  .contact-info-card {
+    gap: 0.75rem !important;
+    padding: 1rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  .tools-category-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+    padding: 0.85rem;
+  }
+
+  .tools-grid {
+    min-width: 0;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+
+  .tool-card {
+    max-width: 100%;
+  }
+
+  footer {
+    padding: 3rem 1rem 1.5rem !important;
+  }
+
+  footer > div {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-badges .badge {
+    font-size: 0.72rem;
+  }
+
+  .hero-stat strong {
+    font-size: 0.9rem;
+  }
+
+  .hero-floating-card {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .project-card-topline {
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .project-type-label {
+    font-size: 0.8rem;
+  }
+}

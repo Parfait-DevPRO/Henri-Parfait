@@ -1,4 +1,5 @@
 import './App.css';
+import './responsive.css';
 import Navigation from '../components/Navigation';
 import Accueil from '../components/Accueil';
 import Competences from '../components/Competences';
