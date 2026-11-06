@@ -1,0 +1,23 @@
+{
+    "name": "mon-portfolio-backend",
+    "version": "1.0.0",
+    "description": "Backend minimal pour le formulaire de contact",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "node --test"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.18.2",
+        "express-rate-limit": "^6.7.0",
+        "helmet": "^6.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
