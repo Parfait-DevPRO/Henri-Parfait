@@ -13,7 +13,7 @@ const competences = [
 
 const tools = [
   { name: 'Wifi', category: 'Réseaux', detail: 'Connexion sans fil', icon: 'wifi', localIcon: 'wifi' }, { name: 'Bluetooth', category: 'Réseaux', detail: 'Communication sans fil', icon: 'bluetooth', fallbackIcon: 'bluetooth' },
-  { name: 'LoRa', category: 'Réseaux', detail: 'IoT longue portée', icon: 'lora', fallbackIcon: 'network' },
+  { name: 'LoRaWAN', category: 'Réseaux', detail: 'IoT longue portée', icon: 'lora', fallbackIcon: 'network' },
   { name: 'Docker', category: 'Outils', detail: 'DevOps', icon: 'docker' }, { name: 'Jenkins', category: 'Outils', detail: 'DevOps', icon: 'jenkins' },
   { name: 'GitHub', category: 'Outils', detail: 'DevOps', icon: 'github', darkLogo: true }, { name: 'GitHub Actions', category: 'Outils', detail: 'CI/CD', icon: 'githubactions' },
   { name: 'Grafana', category: 'Outils', detail: 'Monitoring', icon: 'grafana' }, { name: 'Render', category: 'Outils', detail: 'Déploiement', icon: 'render', fallbackIcon: 'web', darkLogo: true },
